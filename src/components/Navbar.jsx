@@ -59,8 +59,12 @@ const GPT3Navbar = styled.div`
     justify-content: space-between;
     padding: 2rem 6rem;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 700px) {
         padding: 2rem 4rem;
+    }
+
+    @media screen and (max-width: 550px) {
+        padding: 2rem;
     }
 `
 
@@ -94,12 +98,13 @@ const GPT3NavbarLinksContainer = styled.div`
         margin : 0 1rem;
         cursor: pointer;
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1050px) {
         display: none;
     }
 `
 
-const GPT3NavbarSign = styled(GPT3NavbarLinksContainer)`
+const GPT3NavbarSign = styled.div`
+    display: flex;
     justify-content: flex-end;
     align-items: center;
 
@@ -120,7 +125,19 @@ const GPT3NavbarSign = styled(GPT3NavbarLinksContainer)`
         background-color: #FF4820;
     }
 
-    @media screen and (max-width: 768px) {
+    p{
+        color: #fff;
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 25px;
+        text-transform: capitalize;
+
+        margin: 0 1rem;
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 550px) {
         display: none;
     }
 `
@@ -133,7 +150,7 @@ const GPT3NavbarMenu = styled.div`
     svg{
         cursor: pointer;
     }
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 1050px){
         display: flex;
     }
 `
@@ -141,29 +158,59 @@ const GPT3NavbarMenu = styled.div`
 const GPT3NavbarMenuContainer = styled.div`
     display: flex;
     justify-content: flex-end;
-    flex-direction: column;
     align-items: flex-end;
+    flex-direction: column;
+    
     text-align: end;
     background: var(--color-footer);
+    padding: 2rem;
     position: absolute;
-    top: 40px;
     right: 0;
-    min-width: 220px;
+    top: 40px;
     margin-top: 1rem;
-    box-shadow: 0 0 5 rgba(0, 0, 0, 0.2);
+    min-width: 210px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0,0, 0,0.2);
 
     p{
+        color: #fff;
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 25px;
+        text-transform: capitalize;
+
         margin: 1rem 0;
+        cursor: pointer;
+    }
+
+    button{
+        padding: 0.5rem 1rem;
+        color: #fff;
+        background: #FF4820;
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 25px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    @media screen and (max-width: 550px){
+        top: 20px;
     }
 `
 
 const GPT3NavbarMenuContainerLinks = styled.div`
-    @media screen and (min-width: 768px){
+    color: #fff;
+    @media screen and (min-width: 550px){
         display: none;
     }
 `
 
 const GPT3NavbarMenuContainerLinksSign = styled.div`
-
+    @media screen and (min-width: 550px){
+        display: block;
+    }
 `
-
