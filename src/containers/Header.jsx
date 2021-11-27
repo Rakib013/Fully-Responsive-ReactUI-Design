@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import styled from 'styled-components';
 import people from "../assets/people.png";
 import ai from "../assets/ai.png";
@@ -22,10 +22,10 @@ function Header() {
                     <p>1,600 people requested access a visit in last 24 hours</p>
                 </HeaderContentPeople>
 
-                <HeaderImg>
-                    {/* <img src={ai} alt="" /> */}
-                </HeaderImg>
             </HeaderContent>
+            <HeaderImg>
+                <img src={ai} alt="" />
+            </HeaderImg>
         </HeaderContainer>
     )
 }
@@ -34,6 +34,10 @@ export default Header;
 
 const HeaderContainer = styled.div`
     display: flex;
+
+    @media screen and (max-width: 1050px){
+        flex-direction: column;
+    }
 `
 
 const HeaderContent = styled.div`
@@ -50,6 +54,16 @@ const HeaderContent = styled.div`
         font-size: 62px;
         line-height: 75px;
         letter-spacing: -0.04rem;
+
+        @media screen and (max-width: 490px){
+            font-size: 36px;
+            line-height: 48px;
+        }
+
+        @media screen and (max-width: 650px){
+            font-size: 45px;
+            line-height: 60px;
+        }
     }
 
     &>p{
@@ -60,6 +74,20 @@ const HeaderContent = styled.div`
         line-height: 27px;
         color: var(--color-text);
         margin-top: 1.5rem;
+
+        @media screen and (max-width: 650px){
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        @media screen and (max-width: 650px){
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+
+    @media screen and (max-width: 1050px){
+        margin: 0 0 3rem;
     }
 `
 
@@ -80,7 +108,18 @@ const HeaderContentInput = styled.div`
         outline: none;
         padding: 0 1rem;
         color: #fff;
+
+        @media screen and (max-width: 650px){
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        @media screen and (max-width: 650px){
+            font-size: 12px;
+            line-height: 16px;
+        }
     }
+    
     &>button{
         flex: 0.6;
         width: 100%;
@@ -96,8 +135,19 @@ const HeaderContentInput = styled.div`
         border: none;
         outline: none;
         cursor: pointer;
+
         :hover{
             background: #FF5C2E;
+        }
+
+        @media screen and (max-width: 650px){
+            font-size: 12px;
+            line-height: 16px;
+        }
+
+        @media screen and (max-width: 650px){
+            font-size: 16px;
+            line-height: 24px;
         }
     }
 `
@@ -118,11 +168,28 @@ const HeaderContentPeople = styled.div`
         font-family: var(--font-family);
         margin: 0 0 0 1rem;
         font-weight: 500;
-        line-height: 38px;
         font-size: 12px;
         color: #fff;
         text-align: center;
+
+        @media screen and (max-width: 650px){
+            margin: 0;
+        }
+    }
+
+    @media screen and (max-width: 650px){
+        flex-direction: column;
     }
 `
 
-const HeaderImg = styled.div``
+const HeaderImg = styled.div`
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &>img{
+        width: 100%;
+        height: 100%;
+    }
+`
