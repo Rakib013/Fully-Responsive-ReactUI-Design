@@ -21,6 +21,10 @@ function App() {
         <Brand />
         <WhatGPT3 />
         <Features />
+        <Possibility />
+        <Cta />
+        <Blog />
+        <Footer />
       </Container>
     </>
   );
