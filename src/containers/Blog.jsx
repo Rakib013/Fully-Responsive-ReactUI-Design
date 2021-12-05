@@ -10,7 +10,7 @@ import blog05 from "../assets/blog05.png";
 
 function Blog() {
     return (
-        <BLOG className="section__padding">
+        <BLOG className="section__padding" id="blog">
             <Headings>
                 <h1 className="gradient__text">A lot is happening we are blogging about it.</h1>
             </Headings>
